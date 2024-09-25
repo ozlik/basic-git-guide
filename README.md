@@ -196,6 +196,23 @@ $ git fetch
 ```bash
 $ git pull
 ```
+###### Открыть файл, чтобы найти хэш последнего коммита  
+```bash
+$ cat HEAD
+```
+
+
+## Схема статусов
+```mermaid
+graph LR;
+  untracked -- "git add" --> staged+tracked;  
+  modified -- "git add" --> staged+tracked;  
+  staged+tracked -- "Изменения" --> modified;  
+  staged -- "git commit" --> tracked/comitted;  
+  tracked/comitted -- "Изменения" --> modified;  
+%% стрелка без текста для примера:  
+  A --> B;  
+```
 
 
 ## Команды создания ssh
