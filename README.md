@@ -208,7 +208,7 @@ graph LR;
   untracked -- "git add" --> staged+tracked;  
   modified -- "git add" --> staged+tracked;  
   staged+tracked -- "Изменения" --> modified;  
-  staged -- "git commit" --> tracked/comitted;  
+  staged+tracked -- "git commit" --> tracked/comitted;  
   tracked/comitted -- "Изменения" --> modified;  
 %% стрелка без текста для примера:  
   A --> B;  
