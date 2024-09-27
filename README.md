@@ -160,6 +160,29 @@ $ git add .
 ```bash
 $ git commit -m "Комментарий к коммиту."
 ```
+###### Исправить созданный коммит
+```bash
+$ git commit --amend -m "Новое сообщение"
+###### Исправить созданный коммит без изменения сообщения 
+```bash
+$ git commit --amend --no-edit
+```
+###### Убрать лишний файл из staging 
+```bash
+$ git restore --staged <file>
+```
+###### Убрать все файлы из staging 
+```bash
+$ git restore --staged .
+```
+###### Убрать из коммита измененнный файл 
+```bash
+$ git restore <file>
+```
+###### Откатить коммит 
+```bash
+$ git reset --hard <commit hash>
+```
 ###### Просмотр информации о коммитах
 ```bash
 $ git log
